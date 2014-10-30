@@ -28,19 +28,19 @@ encountered, the text is parsed and used to control the PJL job.
 
 The following consturct sets a parameter for a page:
 
-  <![PJL[SET KEY = VALUE]]>
+    <![PJL[SET KEY = VALUE]]>
 
 To set e.g. the tray a page should be to:
 
-  <![PJL[SET MEDIASOURCE = TRAY1]]>
+    <![PJL[SET MEDIASOURCE = TRAY1]]>
 
 Parameters can also be reset using the following construct:
 
-  <![PJL[RESET KEY]]>
+    <![PJL[RESET KEY]]>
 
 For example to reset the tray:
 
-  <![PJL[RESET MEDIASOURCE]]>
+    <![PJL[RESET MEDIASOURCE]]>
 
 Every page is searched for PJL instructions separately. This means that e.g. the tray a page
 is output to can be specified per page. If a page does not contain any PJL instructions, the
@@ -60,7 +60,7 @@ matter.
 The values of the PJL settings can also be parameterized. The following example shows how to
 parameterize the output tray:
 
-  <![PJL[SET MEDIASOURCE = ${FirstTray}]]>
+    <![PJL[SET MEDIASOURCE = ${FirstTray}]]>
 
 To specify the value of a replacement variable, the `-d` option must be used on the command line.
 
@@ -68,7 +68,7 @@ To specify the value of a replacement variable, the `-d` option must be used on 
 
 The PDF to PJL application can be used as follows:
 
-  generate-document | java -jar pdf-to-jpl.jar -n 'print-job.pdf' | lp -d printer-name
+    generate-document | java -jar pdf-to-jpl.jar -n 'print-job.pdf' | lp -d printer-name
 
 The above command processes the output of the `generate-document` application and pipes it to `lp`.
 Alternatively the `-i` and `-o` parameters can be used to input and output files instead of working
@@ -77,7 +77,7 @@ with `STDIN` and `STDOUT`.
 ## Bugs
 
 Bugs should be reported through github at
-[http://github.com/pvginkel/pdf-to-pjl/issues](http://github.com/pvginkel/pdf-to-pjl/issues).
+[http://github.com/gmt-europe/pdf-to-pjl/issues](http://github.com/gmt-europe/pdf-to-pjl/issues).
 
 ## License
 
